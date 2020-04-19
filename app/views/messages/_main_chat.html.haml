@@ -1,28 +1,28 @@
--# .main
--#   .categories
--#     .categories__list 
--#       Category
--#       - @categories.each do |category|
--#         .categories__list__name
--#           = link_to "#{category.name}", "/categories/#{category.id}", class: ".categories__list__name__tag"
--#   .message
--#     .message__info    
--#       .message__text
--#         .message__info__name
--#           - @messages.each do |message|
--#             = image_tag message.user.image, class: 'icon__image'
--#             = message.user.name
--#             - if message.content.present?
--#               .message__text__content
--#                 = image_tag message.image.url, class: 'message__text__image' if message.image.present?
--#               .message__text__content
--#                 = message.content
--#                 .message__text__content__more
--#                   %ul.message__text__content__more__list
--#                   %li
--#                   = link_to '詳細', "/messages/#{message.id}",  method: :get
--#                   - if user_signed_in? && current_user.id == message.user_id
--#                     %li
--#                     = link_to '編集', "/messages/#{message.id}/edit", method: :get
--#                     %li
--#                     = link_to '削除', "/messages/#{message.id}", method: :delete
+.main
+  .categories
+    .categories__list 
+      Category
+      - @categories.each do |category|
+        .categories__list__name
+          = link_to "#{category.name}", "/categories/#{category.id}", class: ".categories__list__name__tag"
+  .message
+    .message__info    
+      .message__text
+        .message__info__name
+          - @messages.each do |message|
+            = image_tag message.user.image, class: 'icon__image'
+            = message.user.name
+            - if message.content.present?
+              .message__text__content
+                = image_tag message.image.url, class: 'message__text__image' if message.image.present?
+              .message__text__content
+                = message.content
+                -# .message__text__content__more
+                -#   %ul.message__text__content__more__list
+                -#   %li
+                -#   = link_to '詳細', "/messages/#{message.id}",  method: :get
+                -#   - if user_signed_in? && current_user.id == message.user_id
+                -#     %li
+                -#     = link_to '編集', "/messages/#{message.id}/edit", method: :get
+                -#     %li
+                -#     = link_to '削除', "/messages/#{message.id}", method: :delete
