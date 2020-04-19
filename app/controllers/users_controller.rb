@@ -1,4 +1,11 @@
 class UsersController < ApplicationController
+  def show
+    @users = User.find(params[:id])
+    @name = current_user.name
+    @messages = current_user.messages
+    @categories = Category.all
+  end
+
   def edit
   end
 
@@ -11,7 +18,6 @@ class UsersController < ApplicationController
   end
 
   private
-
   def user_params
     params.require(:user).permit(:name, :email)
   end

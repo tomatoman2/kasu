@@ -4,4 +4,5 @@ class CategoriesController < ApplicationController
     categories = Category.find(params[:id])
     @messages = categories.messages
     @name = categories.name
+  end
 end

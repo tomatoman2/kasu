@@ -4,7 +4,7 @@
       Category
       - @categories.each do |category|
         .categories__list__name
-          = link_to "#{category.name}", "/categories/#{category.id}", class: ".categories__list__name__tag"
+          = link_to "#{category.name}", "/categories/#{category.id}"
   .message
     .message__info    
       .message__text
