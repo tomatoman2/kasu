@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root "messages#index"
   resources :users, only: [:edit, :update, :show]
   resources :categories, only: [:show]
-  resources :messages
+  resources :messages do
+    resources :comments, only: :create
+  end
 end

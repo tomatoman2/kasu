@@ -37,8 +37,8 @@ class MessagesController < ApplicationController
     @categories = Category.all
     @message = Message.includes(:user).order("user.name DESC")
     @message = Message.find(params[:id])
-    # @comment = Comment.new
-    # @comments = @message.comments.includes(:user)
+    @comment = Comment.new
+    @comments = @message.comments.includes(:user)
   end
 
   private

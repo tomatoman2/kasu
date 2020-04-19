@@ -21,21 +21,21 @@
                 = link_to '編集', "/messages/#{@message.id}/edit", method: :get
                 %li
                 = link_to '削除', "/messages/#{@message.id}", method: :delete
-  -# .comments
-  -#   .comments__form
-  -#     ＜コメント＞
-  -#     - if current_user
-  -#       = form_for [@message, @comment] do |f|
-  -#         = f.text_area :text, class: 'text', size: 30
-  -#         = f.submit "SEND", class: "form__submit"
-  -#     - else
-  -#       %strong
-  -#         %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
-  -#   .comments__list
-  -#     ＜コメント一覧＞
-  -#     - if @comments
-  -#       - @comments.each do |comment|
-  -#         %p
-  -#           %strong
-  -#             = link_to comment.user.name, "/users/#{comment.user_id}"
-  -#         = comment.text
+  .comments
+    .comments__form
+      ＜コメント＞
+      - if current_user
+        = form_for [@message, @comment] do |f|
+          = f.text_area :text, class: 'text', size: 30
+          = f.submit "SEND", class: "form__submit"
+      - else
+        %strong
+          %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+    .comments__list
+      ＜コメント一覧＞
+      - if @comments
+        - @comments.each do |comment|
+          %p
+            %strong
+              = link_to comment.user.name, "/users/#{comment.user_id}"
+          = comment.text

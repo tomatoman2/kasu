@@ -161,7 +161,6 @@
   }
 }
 
-
 .icon__image {
   height: 40px;
   //サイズ指定
@@ -169,4 +168,11 @@
   //画像を丸くする
   object-fit: cover;
   //タテヨコ比を変えないままトリミング
+}
+
+.user__contents {
+  height: 20px;
+  &__name {
+    font-size: 16px;
+  }
 }
