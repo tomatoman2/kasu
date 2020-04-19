@@ -144,6 +144,7 @@
       }
     }
   }
+  //コメント 
   .comments {
     position: absolute;
     top: 40px;
@@ -193,12 +194,19 @@
     }
   }
 }
-
-.new {
+//投稿フォーム
+.write {
+  height: 100%;
   &__form {
     margin: 60px auto;
     width: 700px;
-    border: 2px solid #cc6373;
+    text-align: center;
+    align-items: center; 
+    border: solid;
+    border-color: #cc6373;
+    border-radius: 8px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
     &__title {
       margin: 30px;
       &__name {
@@ -206,6 +214,89 @@
         color: #cc6373;
       }
     }
+  }
+}
+//編集フォーム
+.edit {
+  height: 100%;
+  &__form {
+    margin: 60px auto;
+    width: 700px;
+    text-align: center;
+    align-items: center; 
+    border: solid;
+    border-color: #989afa;
+    border-radius: 8px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    &__title {
+      margin: 30px;
+      &__name {
+        font-size: 30px;
+        color: #989afa;
+      }
+    }
+  }
+}
+//投稿内容入力フォーム
+.field {
+  margin: 20px auto;
+  &__list {
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 200;
+    .pic {
+      display: block;
+      padding: 20px;
+    }
+  }
+  .field-input {
+    input {
+      width: 100%;
+      padding: 10px;
+      letter-spacing: 1px;
+    }
+  }
+}
+//更新メッセージ
+.update {
+  margin: 60px auto;
+  width: 400px;
+  text-align: center;
+  border: solid;
+  border-color: #989afa;
+  border-radius: 8px;
+  font-family: "Comic Sans MS";
+  font-weight: bold;
+  &__form {
+    margin: auto;
+    font-size: 30px;
+    color: #989afa;
+  }
+  .top {
+    text-decoration: none;
+    color: #989afa;
+  }
+}
+//削除メッセージ
+.destroy {
+  margin: 60px auto;
+  width: 400px;
+  text-align: center; 
+  border: solid;
+  border-color: #b5b9bb;
+  border-radius: 8px;
+  font-family: "Comic Sans MS";
+  font-weight: bold;
+  &__form {
+    margin: auto;
+    font-size: 30px;
+    color: #b5b9bb;
+  }
+  .top {
+    text-decoration: none;
+    color: #b5b9bb;
   }
 }
 
