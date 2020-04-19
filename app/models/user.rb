@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :messages
   has_many :comments
   validates :name, presence: true, uniqueness: true
+  mount_uploader :avatar, AvatarUploader
 end
