@@ -149,7 +149,6 @@
     position: absolute;
     top: 40px;
     left: 1100px;
-    height: 100%;
     width: 300px;
     border: solid;
     border-color: #d5b3fc;
@@ -169,7 +168,7 @@
       text-align: center;
       align-items: center; 
       &__title {
-        padding: 8px;
+        padding: 20px;
         text-align: left;
         .name {
           text-decoration: none;
@@ -192,9 +191,24 @@
         }
       }
       .likes__list {
+        padding: 20px;
+        text-align: left;
         color: #989afa;
         li {
           list-style: none;
+          .name {
+            text-decoration: none;
+            color: #8c8b8b;
+            font-size: 16px;    
+            font-weight: bold;
+            border-bottom: #ede7d9 3px solid;
+            padding: 2px;
+          }
+          .name:hover {
+            box-shadow    : none;        /* カーソル時の影消去 */
+            color         : #333333;     /* 背景色     */
+            background    : #ffffff;
+          }
         }
       }
     }
@@ -305,7 +319,6 @@
     color: #b5b9bb;
   }
 }
-
 .icon__image {
   height: 55px;
   //サイズ指定
@@ -314,7 +327,6 @@
   object-fit: cover;
   //タテヨコ比を変えないままトリミング
 }
-
 .contents {
   padding: 10px;
   &__title {
